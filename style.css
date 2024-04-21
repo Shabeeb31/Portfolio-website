@@ -177,3 +177,145 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("background/background.png") no-repeat center;
+    height: 100vh;
+    color: #000000;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 20px;
+}
+.home .home-content .text-2{
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 35px;
+    margin: 1px 0;
+}
+.home .home-content .text-3 span{
+    color:  rgb(0, 173, 145);
+    font-weight: 500;
+}
+.classbox
+{
+    position: relative;
+    width: 160px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.classbox::before
+{
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 585%;
+    border-radius: 0;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate-rotate 4s linear infinite;
+   
+}
+.classbox::after
+{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e3831;
+    /* background:rgb(0, 173, 145) ; */
+    border-radius: 18px;
+}
+@keyframes animate-rotate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.classbox a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6em;
+    z-index: 10;
+    cursor: pointer;
+}
+.classbox:hover{
+    box-shadow: 0 0 80px rgb(0, 255, 213) ,2px 1px 30px rgb(255, 255, 255);
+    transition:all 0.5s ease;
+    transform:scale3d(1.1);
+    
+}
+
+/* about section styling */
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(0, 173, 145);
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+     display: inline-block;
+    /* background: crimson; */
+    color:  rgb(0, 173, 145);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid  rgb(0, 173, 145);
+    transition: all 0.3s ease-in-out; 
+    
+    
+}
+.about .about-content .right a:hover{
+   color: white;
+    background: rgb(0, 173, 145);
+
+} 
